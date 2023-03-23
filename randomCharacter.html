@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="mydiv" style="text-align: center">
+      <button
+        onclick="generateChar()"
+        style="padding: 30px; font-size: 25px; background-color: chocolate"
+      >
+        Generate Character
+      </button>
+      <div id="charDiv" style="font-size: 100px; margin-top: 50px"></div>
+    </div>
+    <script>
+      function generateChar() {
+        let chars = [..."ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
+        let charDiv = document.getElementById("charDiv");
+        let charNum = Math.floor(Math.random() * (26 - 1) + 1);
+        charDiv.innerHTML = chars[charNum];
+        console.log(chars[charNum]);
+      }
+    </script>
+  </body>
+</html>
